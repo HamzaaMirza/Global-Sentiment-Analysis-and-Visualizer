@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sentiment Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <canvas id="globe-canvas"></canvas>
+
+    <div id="label-container"></div>
+
+    <header class="header">
+        <h1>Global Sentiment Analysis</h1>
+        <p>Visualizing global sentiment scores in real-time</p>
+    </header>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Fetching Sentiment Data...</p>
+    </div>
+
+    <div id="info-panel" class="info-panel">
+        <button id="info-close" class="close-button">&times;</button>
+        <h2 id="info-country">Country Name</h2>
+        <p>Sentiment Score: <strong id="info-sentiment">0.00</strong></p>
+        <div class="info-details">
+            </div>
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+            }
+        }
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
